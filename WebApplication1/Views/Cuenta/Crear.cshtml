@@ -1,0 +1,62 @@
+﻿@model BusinessEntity.CuentaBancaria
+
+<h2>Registrar Cuenta Bancaria</h2>
+
+<form asp-action="Crear" method="post">
+    <div class="form-group">
+        <label>Número de Cuenta</label>
+        <input asp-for="NumeroCuenta" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Cliente</label>
+        <input asp-for="Cliente" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Descripción</label>
+        <input asp-for="Descripcion" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar la cuenta</button>
+</form>
+
+@if (ViewBag.Mensaje != null)
+{
+    <div class="alert alert-info mt-3">
+        @ViewBag.Mensaje
+    </div>
+}
+
+<div class="d-flex justify-content-center mt-3">
+    
+    <a asp-action="Buscar" asp-controller="Cuenta" class="btn btn-secondary me-5">Buscar cuenta bancaria</a>
+    <a asp-action="List" asp-controller="Cuenta" class="btn btn-secondary ">Obtener cuentas registradas</a>
+
+</div>
+
+
+
+
+<!-- Script directo sin sección -->
+<script>
+    window.addEventListener("DOMContentLoaded", function () {
+        const mensaje = document.getElementById("mensajeExito");
+        const form = document.getElementById("formArticulo");
+
+        if (mensaje) {
+            setTimeout(() => {
+                mensaje.style.transition = "opacity 0.5s ease";
+                mensaje.style.opacity = "0";
+                setTimeout(() => mensaje.remove(), 500);
+            }, 3000);
+
+            if (form) {
+                form.reset();
+
+                
+                const campoCodigo = form.querySelector('input[name="Codigo"]');
+                if (campoCodigo) {
+                    campoCodigo.focus();
+                }
+            }
+        }
+    });
+</script>

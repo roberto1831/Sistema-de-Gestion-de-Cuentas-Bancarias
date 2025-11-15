@@ -1,0 +1,15 @@
+C:\Users\rober\RiderProjects\BancoNcapas\DataAccessLayer\bin\Debug\net9.0\DataAccessLayer.deps.json
+C:\Users\rober\RiderProjects\BancoNcapas\DataAccessLayer\bin\Debug\net9.0\DataAccessLayer.dll
+C:\Users\rober\RiderProjects\BancoNcapas\DataAccessLayer\bin\Debug\net9.0\DataAccessLayer.pdb
+C:\Users\rober\RiderProjects\BancoNcapas\DataAccessLayer\bin\Debug\net9.0\BusinessEntity.dll
+C:\Users\rober\RiderProjects\BancoNcapas\DataAccessLayer\bin\Debug\net9.0\BusinessEntity.pdb
+C:\Users\rober\RiderProjects\BancoNcapas\DataAccessLayer\obj\Debug\net9.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\rober\RiderProjects\BancoNcapas\DataAccessLayer\obj\Debug\net9.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rober\RiderProjects\BancoNcapas\DataAccessLayer\obj\Debug\net9.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\rober\RiderProjects\BancoNcapas\DataAccessLayer\obj\Debug\net9.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\rober\RiderProjects\BancoNcapas\DataAccessLayer\obj\Debug\net9.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\rober\RiderProjects\BancoNcapas\DataAccessLayer\obj\Debug\net9.0\DataAcce.E67BD773.Up2Date
+C:\Users\rober\RiderProjects\BancoNcapas\DataAccessLayer\obj\Debug\net9.0\DataAccessLayer.dll
+C:\Users\rober\RiderProjects\BancoNcapas\DataAccessLayer\obj\Debug\net9.0\refint\DataAccessLayer.dll
+C:\Users\rober\RiderProjects\BancoNcapas\DataAccessLayer\obj\Debug\net9.0\DataAccessLayer.pdb
+C:\Users\rober\RiderProjects\BancoNcapas\DataAccessLayer\obj\Debug\net9.0\ref\DataAccessLayer.dll

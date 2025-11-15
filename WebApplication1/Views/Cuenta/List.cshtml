@@ -1,0 +1,33 @@
+@using System.Collections.Generic
+@model IEnumerable<BusinessEntity.CuentaBancaria>
+
+<h2>Lista de Cuentas Bancarias</h2>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Número de Cuenta</th>
+        <th>Cliente</th>
+        <th>Descripción</th>
+        <th>Acciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var cuenta in Model)
+    {
+        <tr>
+            <td>@cuenta.NumeroCuenta</td>
+            <td>@cuenta.Cliente</td>
+            <td>@cuenta.Descripcion</td>
+            <td>
+                <a asp-action="Editar" asp-route-numeroCuenta="@cuenta.NumeroCuenta" class="btn btn-sm btn-warning">Editar</a>
+                <a asp-action="Eliminar" asp-route-numeroCuenta="@cuenta.NumeroCuenta" class="btn btn-sm btn-danger" onclick="return confirm('¿Seguro que deseas eliminar esta cuenta?');">Eliminar</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<div class="d-flex justify-content-end mt-3">
+    <a asp-action="Crear" asp-controller="Cuenta" class="btn btn-secondary">Regresar a crear Cuenta</a>
+</div>

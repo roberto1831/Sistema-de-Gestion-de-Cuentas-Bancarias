@@ -1,0 +1,29 @@
+﻿@model string
+
+<h2>Buscar Cuenta Bancaria</h2>
+
+<form asp-action="Buscar" method="post">
+    <div class="form-group">
+        <label>Número de Cuenta</label>
+        <input type="text" name="numeroCuenta" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+</form>
+
+@if (ViewBag.Mensaje != null)
+{
+    <div class="alert alert-warning mt-3">@ViewBag.Mensaje</div>
+}
+else if (ViewBag.Resultado != null)
+{
+    var cuenta = (BusinessEntity.CuentaBancaria)ViewBag.Resultado;
+    <div class="mt-4">
+        <h4>Resultado:</h4>
+        <p><strong>Cliente:</strong> @cuenta.Cliente</p>
+        <p><strong>Descripción:</strong> @cuenta.Descripcion</p>
+    </div>
+}
+
+<div class="d-flex justify-content-end mt-3">
+    <a asp-action="Crear" asp-controller="Cuenta" class="btn btn-secondary">Regresar a registro de cuentas</a>
+</div>

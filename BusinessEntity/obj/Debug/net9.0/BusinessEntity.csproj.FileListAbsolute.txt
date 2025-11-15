@@ -1,0 +1,11 @@
+C:\Users\rober\RiderProjects\BancoNcapas\BusinessEntity\bin\Debug\net9.0\BusinessEntity.deps.json
+C:\Users\rober\RiderProjects\BancoNcapas\BusinessEntity\bin\Debug\net9.0\BusinessEntity.dll
+C:\Users\rober\RiderProjects\BancoNcapas\BusinessEntity\bin\Debug\net9.0\BusinessEntity.pdb
+C:\Users\rober\RiderProjects\BancoNcapas\BusinessEntity\obj\Debug\net9.0\BusinessEntity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rober\RiderProjects\BancoNcapas\BusinessEntity\obj\Debug\net9.0\BusinessEntity.AssemblyInfoInputs.cache
+C:\Users\rober\RiderProjects\BancoNcapas\BusinessEntity\obj\Debug\net9.0\BusinessEntity.AssemblyInfo.cs
+C:\Users\rober\RiderProjects\BancoNcapas\BusinessEntity\obj\Debug\net9.0\BusinessEntity.csproj.CoreCompileInputs.cache
+C:\Users\rober\RiderProjects\BancoNcapas\BusinessEntity\obj\Debug\net9.0\BusinessEntity.dll
+C:\Users\rober\RiderProjects\BancoNcapas\BusinessEntity\obj\Debug\net9.0\refint\BusinessEntity.dll
+C:\Users\rober\RiderProjects\BancoNcapas\BusinessEntity\obj\Debug\net9.0\BusinessEntity.pdb
+C:\Users\rober\RiderProjects\BancoNcapas\BusinessEntity\obj\Debug\net9.0\ref\BusinessEntity.dll
