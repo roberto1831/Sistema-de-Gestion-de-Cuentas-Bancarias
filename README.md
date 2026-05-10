@@ -1,82 +1,132 @@
-# 🏦 BancoNcapas
+# 🏦 BancoNcapas – Sistema de Gestión de Cuentas Bancarias
 
-### Sistema de Gestión de Cuentas Bancarias --- Arquitectura en Capas (3-Tier) con ASP.NET Core MVC + SQL Server
+![.NET](https://img.shields.io/badge/.NET-9.0-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)
+![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
+![ASP.NET MVC](https://img.shields.io/badge/ASP.NET_Core_MVC-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-![banner](https://raw.githubusercontent.com/github/explore/main/topics/dotnet/dotnet.png)
+> Sistema CRUD para administración de cuentas bancarias, desarrollado con **ASP.NET Core MVC 9** y **arquitectura en 3 capas (3-Tier)**, usando ADO.NET para acceso directo a SQL Server.
 
-## 🏷️ Badges
-
-![.NET](https://img.shields.io/badge/.NET-9.0-blueviolet)
-![C#](https://img.shields.io/badge/Language-C%23-239120) ![SQL
-Server](https://img.shields.io/badge/Database-SQL%20Server-red)
-![MVC](https://img.shields.io/badge/Pattern-MVC-brightgreen)
-![Arquitectura](https://img.shields.io/badge/Arquitectura-3--Capas-orange)
-![Estado](https://img.shields.io/badge/Estado-En%20Desarrollo-yellow)
-
-# 📋 Tabla de Contenidos
-
--   Descripción del Proyecto
--   Tecnologías
--   Arquitectura del Sistema
--   Estructura del Repositorio
--   Configuración y Ejecución
--   Script de Base de Datos
--   Funcionalidades
--   Mejoras Futuras
--   Autor
-
-## 📝 Descripción del Proyecto
-
-BancoNcapas es un sistema CRUD para la administración de cuentas
-bancarias, desarrollado con ASP.NET Core MVC y arquitectura en 3 capas.
-
-## 🧰 Tecnologías
-
--   ASP.NET Core MVC 9\
--   C#\
--   SQL Server\
--   ADO.NET\
--   Bootstrap 5.3\
--   jQuery
+---
 
 ## 🧱 Arquitectura del Sistema
 
-UI → BAL → DAL → Entity
+```
+┌─────────────────────────────────────────────┐
+│           Capa de Presentación (UI)          │
+│         ASP.NET Core MVC + Bootstrap         │
+└───────────────────┬─────────────────────────┘
+                    │
+┌───────────────────▼─────────────────────────┐
+│         Capa de Lógica de Negocio (BAL)      │
+│           Validaciones y reglas              │
+└───────────────────┬─────────────────────────┘
+                    │
+┌───────────────────▼─────────────────────────┐
+│         Capa de Acceso a Datos (DAL)         │
+│              ADO.NET + SQL Server            │
+└───────────────────┬─────────────────────────┘
+                    │
+┌───────────────────▼─────────────────────────┐
+│                  Entidades                   │
+│             Modelos de dominio               │
+└─────────────────────────────────────────────┘
+```
 
-## 📁 Estructura del Repositorio
+| Capa | Responsabilidad |
+|---|---|
+| **UI** | Vistas MVC, formularios, Bootstrap 5.3 |
+| **BAL** | Lógica de negocio y validaciones |
+| **DAL** | Consultas SQL con ADO.NET |
+| **Entity** | Modelos de dominio (CuentaBancaria) |
 
-(Árbol del proyecto)
+---
 
-## ⚙️ Configuración y Ejecución
+## 🛠️ Tecnologías Utilizadas
 
-1.  Clonar repositorio\
-2.  Configurar cadena de conexión\
-3.  Ejecutar script SQL\
-4.  Levantar el proyecto con `dotnet run`
+| Tecnología | Versión | Uso |
+|---|---|---|
+| ASP.NET Core MVC | 9.0 | Framework web principal |
+| C# | Latest | Lenguaje backend |
+| SQL Server | Latest | Base de datos relacional |
+| ADO.NET | — | Acceso directo a datos |
+| Bootstrap | 5.3 | Estilos y UI responsiva |
+| jQuery | Latest | Interactividad frontend |
 
-## 🗃️ Script de Base de Datos
-
-    CREATE TABLE CuentaBancaria (
-        NumeroCuenta VARCHAR(50) PRIMARY KEY,
-        Cliente VARCHAR(150) NOT NULL,
-        Descripcion VARCHAR(250) NOT NULL
-    );
+---
 
 ## 🚀 Funcionalidades
 
--   Crear\
--   Buscar\
--   Listar\
--   Editar\
--   Eliminar
+| Operación | Descripción |
+|---|---|
+| ➕ Crear | Registrar nueva cuenta bancaria |
+| 🔍 Buscar | Buscar cuenta por número o cliente |
+| 📋 Listar | Ver todas las cuentas registradas |
+| ✏️ Editar | Modificar datos de una cuenta |
+| 🗑️ Eliminar | Eliminar una cuenta del sistema |
+
+---
+
+## 🗃️ Script de Base de Datos
+
+```sql
+CREATE TABLE CuentaBancaria (
+    NumeroCuenta VARCHAR(50)  PRIMARY KEY,
+    Cliente      VARCHAR(150) NOT NULL,
+    Descripcion  VARCHAR(250) NOT NULL
+);
+```
+
+---
+
+## ⚙️ Configuración y Ejecución
+
+### Prerrequisitos
+- .NET 9 SDK
+- SQL Server (local o remoto)
+
+### Pasos
+
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/roberto1831/BancoNcapas.git
+cd BancoNcapas
+
+# 2. Ejecutar el script SQL en SQL Server
+# (usar el script de la sección anterior)
+
+# 3. Configurar cadena de conexión en appsettings.json
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Database=BancoDB;Trusted_Connection=True;"
+  }
+}
+
+# 4. Levantar el proyecto
+dotnet run
+```
+
+---
 
 ## 🛠 Mejoras Futuras
 
--   Migrar a EF Core\
--   Validaciones\
--   Autenticación\
--   Pruebas unitarias
+- [ ] Migrar acceso a datos de ADO.NET a **Entity Framework Core**
+- [ ] Agregar validaciones avanzadas en formularios
+- [ ] Implementar autenticación y autorización de usuarios
+- [ ] Añadir pruebas unitarias (xUnit / NUnit)
+- [ ] Dockerizar el proyecto
+
+---
 
 ## 👤 Autor
 
-Ing. Roberto Toapanta
+**Ing. Roberto Toapanta**  
+📍 Quito, Ecuador  
+🔗 [GitHub](https://github.com/roberto1831) · [LinkedIn](https://linkedin.com/in/roberto1831)
+
+---
+
+## 📄 Licencia
+
+Uso académico / demostrativo. No apto para producción sin revisión de seguridad.
